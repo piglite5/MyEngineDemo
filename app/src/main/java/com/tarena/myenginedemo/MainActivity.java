@@ -24,10 +24,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @OnClick({R.id.btn_simpleparticlesample,R.id.btn_particlinterfaceimplesample,R.id.btn_particlesample,R.id.btn_entitymodifersample,R.id.btn_modifersample,R.id.btn_tworectanglesample,R.id.btn_relativerotatesample,R.id.btn_textsample,R.id.btn_animatesprite,R.id.btn_linesample,R.id.btn_rectanglesample,R.id.btn_spritesample,R.id.btn_applyprimitive})
+    @OnClick({R.id.btn_fireparticlesample,R.id.btn_coolparticlesample,R.id.btn_simpleparticlesample,R.id.btn_particlinterfaceimplesample,R.id.btn_particlesample,R.id.btn_entitymodifersample,R.id.btn_modifersample,R.id.btn_tworectanglesample,R.id.btn_relativerotatesample,R.id.btn_textsample,R.id.btn_animatesprite,R.id.btn_linesample,R.id.btn_rectanglesample,R.id.btn_spritesample,R.id.btn_applyprimitive})
     public void jumpTo(View view){
         Intent intent;
         switch (view.getId()){
+            case R.id.btn_fireparticlesample:
+                intent = new Intent(this,ParticleFireSampleActivity.class);
+                break;
             case R.id.btn_linesample:
                 intent = new Intent(this,LineSampleActivity.class);
                 break;
@@ -67,7 +70,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_simpleparticlesample:
                 intent = new Intent(this,ParticleSimpleSampleActivity.class);
                 break;
-
+            case R.id.btn_coolparticlesample:
+                intent = new Intent(this,CoolParticleSampleActivity.class);
+                break;
             default:
                 throw new RuntimeException("不正确的按钮设置");
         }
